@@ -90,3 +90,7 @@ class Device(Resource):
 
 api.add_resource(DeviceList, '/devices')
 api.add_resource(Device, '/device/<string:identifier>')
+
+# curl http://localhost:5000/devices
+# curl -H "Content-type: application/json" -X POST http://localhost:5000/devices -d '{ "identifier": "floor-lamp2", "name": "Floor Lamp2", "device_type": "switch", "controller_gateway": "192.168.0.3" }'
+# curl -H "Content-type: text/plain" -X DELETE http://localhost:5000/device/floor-lamp3
